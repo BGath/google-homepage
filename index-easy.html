@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Easy Google Homepage</title>
-        <link rel="stylesheet" type="css/text" href="ghestyle.css">
+        <link rel="stylesheet" type="text/css" href="ghestyle.css">
+    </head>
         <body>
             <div id="header-con">
-                <header id="header">
+                <header id="header" class="hs">
                     <div id="top-left">
                         <nav id="tlnav">
                             <ul id="tlul">
@@ -15,16 +16,18 @@
                             </ul>
                         </nav>
                     </div>
-                    <div id="top-right">
+                    <div id="top-right" style="padding-left: 80px;">
                         <nav id="trnav">
                             <ul id="trul">
-                                <li><a href="#">Gmail</a></li>
-                                <li><a href="#">Images</a></li>
+                                <span id="sib">
+                                    <li><a id="sign-in" href="#">Sign In</a></li>
+                                </span>
                                 <li><a href="#"><img src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png" href="#" alt="google app launcher icon" style="width: 25px;"></a></li>
+                                <li><a href="#">Images</a></li>
+                                <li><a href="#">Gmail</a></li>
+                                
+                                
                             </ul>
-                            <div id="sib">
-                            <a id="sign-in" href="#">Sign In</a>
-                            </div>
                         </nav>
                     </div>
                     <div id="img-con">
@@ -38,12 +41,12 @@
                     <div id="search">
                         <input id="search-bar" type="search"> 
                     </div>
-                    <div id="buttons">
-                    <div id="lb">
-                        <input id="gs" type="submit" value="Google Search">
+                    <div id="buttons" class="buttons" style="">
+                    <div id="lb" style="width: 30%; height: 50%;">
+                        <input id="gs"class="bs" type="submit" label="Google Search" value="Google Search">
                     </div>
-                    <div id="rb">
-                        <input id="lucky" type="submit" value="I'm Feeling Lucky">
+                    <div id="rb"  style="width: 30%; height: 50%;">
+                        <input id="lucky" class="bs" type="submit" label="I'm Feeling Lucky" value="I'm Feeling Lucky">
                     </div>
                     </div>
                     </div>
@@ -51,8 +54,8 @@
                 </section>
             </div>
                 <div id="footer-con">
-                    <footer id="footer">
-                        <div id="bl">
+                    <footer id="footer" class="fs">
+                        <div id="bl" style="width: 500px;">
                             <nav id="blnav">
                                 <ul id="blul">
                                     <li><a href="#">Advertising</a></li>
@@ -61,17 +64,17 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div id="br">
+                        <div id="br" style="width: 500px; float: right;">
                             <nav id="brnav">
                                 <ul id="brul">
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Terms</a></li>
                                     <li><a href="#">Settings</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </footer>
                 </div>
         </body>
-    </head>
+
 </html>

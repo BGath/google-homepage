@@ -1,46 +1,250 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-    vertical-align: baseline;
-    text-decoration: none;
-    list-style-type: none;
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html{
+	color:#000;
+	background:#FFF;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-    line-height: 1;
-    background-color: black;
-}
-ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+	padding:0;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,
+img {
+	border:0;
+}
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+ 
+ol,
+ul {
+	list-style:none;
+}
+ 
+caption,
+th {
+	text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,
+q:after {
+	content:'';
+}
+abbr,
+acronym {
+	border:0;
+	font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+	*font-size:100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+	color:#000;
+}
+
+/* Modifications */
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0px;
+  }
+
+body {
+	line-height: 1;
+	background: #fff;
+	text-align: center;
+	max-width: 100%;
+	width: 100%;
+	font-family: arial;
+	font-size: small;
+	position: absolute;	
+}
+.hs {
+	margin: 12px 12px 0px 12px;
+	color: #797979;
+}
+#top-left {
+	display: inline-block;
+	float: left;
+}
+#top-right {
+	display: inline-block;
+	float: right;
+
+}
+#img-con {
+	padding-top: 145px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+#sec-con {
+	line-height: 50px;
+	padding-bottom: 36.7vh;
+}
+#search-bar {
+	width: 38em;
+	height: 45px;
+	padding: 0px;
+	border: solid 1px #dcdcdf;
+	border-radius: 20px;
+	margin-top: 10px;
+
+}
+.sscs {
+	
+}
+.buttons {
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 14px;
+	width: 500px;
+	height: 150px; 
+	margin-left: 25vw;
+	margin-right: 40vw;
+	text-align: center;
+
+}
+.bs {
+	padding: 10px 20px 10px 20px;
+	border: none;
+	border-radius: 5px;
+	color: #797979;
+	background-color: #eef0f1;
+	font-size: 14px;
+	margin-top: 25px;
+}
+#lb {
+	float: left;
+	margin-left: 115px;
+	
+
+}
+#rb {
+	float: right;
+	margin-right: 85px;
+	
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+li a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+#top-left nav ul li {
+	float: left;
+}
+#top-right nav ul li {
+	float: right;
+}
+#bl nav ul li {
+	float: left;
+
+}
+#bl {
+float: left;
+}
+}
+#br nav ul li a{
+	float: right;
+	
+
+}
+#br ul li {
+	display: inline;
+	float: right;
+
+
+}
+#footer-con {
+	background-color: #eef0f1 !important;
+	border: solid 0.5px #dcdcdf;
+	overflow: hidden;
+	width: 100%;
+}
+.fs {
+	font-size: 14px;
+	padding-bottom: 9px;
+	padding-top: 5px;
 }
