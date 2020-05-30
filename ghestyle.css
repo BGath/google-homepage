@@ -129,33 +129,58 @@ body {
 	line-height: 1;
 	background: #fff;
 	text-align: center;
-	max-width: 100%;
-	width: 100%;
+	max-width: auto;
+	width: 1200px;
 	font-family: arial;
 	font-size: small;
-	position: absolute;	
+	position: bottom;
+
 }
 .hs {
 	margin: 12px 12px 0px 12px;
-	color: #797979;
+	width: 1250px;
+	
 }
 #top-left {
-	display: inline-block;
+	width: 400px;
 	float: left;
 }
-#top-right {
+#top-left ul li a {
+	display: inline-block;
+	float: left;
+	color: rgb(85, 84, 84);
+	
+}
+.sibs {
+	background-color:#4285f4;
+	border: #4285f4;
+	border-radius: 2px;
+	color: #fff !important;
+	font-weight: bold;
+	padding:9px 15px;
+	margin-left: 7px;
+}
+#top-right a {
 	display: inline-block;
 	float: right;
+	color: #000;
 
 }
 #img-con {
-	padding-top: 145px;
+	padding-top: 100px;
 	width: 100%;
 	margin-bottom: 10px;
 }
+.wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: auto;
+}
 #sec-con {
 	line-height: 50px;
-	padding-bottom: 36.7vh;
+	padding-bottom: 22.6vh;
+	text-align: center;
 }
 #search-bar {
 	width: 38em;
@@ -164,20 +189,25 @@ body {
 	border: solid 1px #dcdcdf;
 	border-radius: 20px;
 	margin-top: 10px;
-
+	background: url(https://www.netclipart.com/pp/m/15-153265_google-microphone-png-google-search-by-voice-icon.png) no-repeat;
+	background-size: 17px;
+	background-position: 340pt;
 }
-.sscs {
-	
+.search-icon {
+	position: relative;
+	left: 40px;
+	top: 7px;
+
 }
 .buttons {
 	border: none;
 	border-radius: 5px;
 	display: inline-block;
 	font-size: 14px;
-	width: 500px;
+	width: auto;
 	height: 150px; 
-	margin-left: 25vw;
-	margin-right: 40vw;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 
 }
@@ -189,16 +219,16 @@ body {
 	background-color: #eef0f1;
 	font-size: 14px;
 	margin-top: 25px;
+	text-align: center;
 }
 #lb {
 	float: left;
-	margin-left: 115px;
-	
+	margin-left: auto;
 
 }
 #rb {
 	float: right;
-	margin-right: 85px;
+	margin-right: auto;
 	
 }
 ul {
@@ -218,16 +248,18 @@ li a {
 #top-right nav ul li {
 	float: right;
 }
-#bl nav ul li {
+#bl nav ul li a {
 	float: left;
-
+	color: rgb(112, 107, 107);
 }
 #bl {
-float: left;
+	float: left;
 }
-}
-#br nav ul li a{
+
+#br nav ul li a {
 	float: right;
+	color: rgb(112, 107, 107);
+
 	
 
 }
@@ -241,10 +273,47 @@ float: left;
 	background-color: #eef0f1 !important;
 	border: solid 0.5px #dcdcdf;
 	overflow: hidden;
-	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	width: 1280px;
+	max-width: 1280px;
+	overflow-x: visible;
 }
 .fs {
 	font-size: 14px;
 	padding-bottom: 9px;
 	padding-top: 5px;
+	margin: 0px 12px 0px 12px;
+}
+@media (max-width: 500px) {
+	body {
+		width: auto;
+	}
+	#top-left {
+		display: none;
+	}
+	#top-right {
+		display: none;
+	}
+	#sec-con {
+		position: absolute;
+	}
+	#footer-con {
+		position: fixed;
+	}
+}
+@media (max-width: 900px) {
+	.invisible {
+		display: none;
+	}
+} 
+@media (min-width: 1000px) {
+	body {
+		width: 100%;
+	}
+}
+@media (min-height: 900px) {
+	#sec-con {
+		padding: 0px;
+	}
 }
